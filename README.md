@@ -7,7 +7,6 @@ A marketplace app for iOS and Android.
 Open a terminal in the project location and type:
 
 - npm install
-- npm start
 
 # How to run
 
