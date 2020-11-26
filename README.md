@@ -1,5 +1,4 @@
-rn-market
-===
+# rn-market
 
 A marketplace app for iOS and Android.
 
@@ -12,7 +11,7 @@ Open a terminal in the project location and type:
 
 # How to run
 
-If you have xcode and android studio installed and setup::
+You have to first have xCode and android studio and its emulators setup.
 
 If you want to run it on iOS:
 
