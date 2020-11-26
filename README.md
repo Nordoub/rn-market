@@ -1,6 +1,6 @@
 # rn-market
 
-A marketplace app for iOS and Android.
+A marketplace app for iOS and Android. Created with the React-Native framework.
 
 # Setup
 
