@@ -17,6 +17,18 @@ const listings = [
     price: 1000,
     image: require("../assets/couch.jpg"),
   },
+  {
+    id: 3,
+    title: "Red jacket for sale",
+    price: 100,
+    image: require("../assets/jacket.jpg"),
+  },
+  {
+    id: 4,
+    title: "Couch in great condition",
+    price: 1000,
+    image: require("../assets/couch.jpg"),
+  },
 ];
 
 function ListingsScreen(props) {
