@@ -11,7 +11,7 @@ const validationSchema = Yup.object().shape({
   password: Yup.string().required().min(4).max(255).label("Password"),
 });
 
-function RegisterScreen() {
+function RegisterScreen({}) {
   return (
     <Screen style={styles.container}>
       <AppForm

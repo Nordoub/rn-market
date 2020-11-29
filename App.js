@@ -1,36 +1,46 @@
 import React, { useState } from "react";
-import {
-  Dimensions,
-  StyleSheet,
-  View,
-  SafeAreaView,
-  Image,
-  Platform,
-  StatusBar,
-  TextInput,
-  Text,
-  Switch,
-} from "react-native";
-import {
-  useDimensions,
-  useDeviceOrientation,
-} from "@react-native-community/hooks";
+import { Text, Button } from "react-native";
+import { createStackNavigator } from "@react-navigation/stack";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { NavigationContainer, useNavigation } from "@react-navigation/native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
-import WelcomeScreen from "./app/screens/WelcomeScreen";
-import ViewImageScreen from "./app/screens/ViewImageScreen";
-import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
-import MessagesScreen from "./app/screens/MessagesScreen";
-import AccountScreen from "./app/screens/AccountScreen";
-import ListingsScreen from "./app/screens/ListingsScreen";
-
 import Screen from "./app/components/Screen";
-import AppPicker from "./app/components/AppPicker";
-import AppTextInput from "./app/components/AppTextInput";
 import LoginScreen from "./app/screens/LoginScreen";
 import RegisterScreen from "./app/screens/RegisterScreen";
+import WelcomeScreen from "./app/screens/WelcomeScreen";
+import ListingsScreen from "./app/screens/ListingsScreen";
 import ListingEditScreen from "./app/screens/ListingEditScreen";
+import AccountScreen from "./app/screens/AccountScreen";
+
+const Stack = createStackNavigator();
+
+// const AuthNavigator = () => (
+//   <Stack.Navigator initialRouteName="WelcomeScreen">
+//     <Stack.Screen name="Welcome" component={WelcomeScreen} />
+//     <Stack.Screen name="Login" component={LoginScreen} />
+//     <Stack.Screen name="Register" component={RegisterScreen} />
+//   </Stack.Navigator>
+// );
+
+const Tab = createBottomTabNavigator();
+const TabNavigator = () => (
+  <Tab.Navigator initialRouteName="Feed">
+    <Tab.Screen name="Feed" component={ListingsScreen} />
+    <Tab.Screen name="ListingsEdit" component={ListingEditScreen} />
+    <Tab.Screen name="Account" component={AccountScreen} />
+  </Tab.Navigator>
+);
 
 export default function App() {
-  return <LoginScreen />;
+  return (
+    // <NavigationContainer>
+    //   <AuthNavigator />
+    // </NavigationContainer>
+
+    <NavigationContainer>
+      <TabNavigator />
+    </NavigationContainer>
+    // ben bij stap 2
+  );
 }
