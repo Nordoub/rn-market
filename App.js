@@ -25,10 +25,12 @@ const Stack = createStackNavigator();
 
 const Tab = createBottomTabNavigator();
 const TabNavigator = () => (
-  <Tab.Navigator initialRouteName="Feed">
+  <Tab.Navigator initialRouteName="LoginScreen">
     <Tab.Screen name="Feed" component={ListingsScreen} />
     <Tab.Screen name="ListingsEdit" component={ListingEditScreen} />
-    <Tab.Screen name="Account" component={AccountScreen} />
+    <Tab.Screen name="LoginScreen" component={LoginScreen} />
+    <Tab.Screen name="RegisterScreen" component={RegisterScreen} />
+    <Tab.Screen name="WelcomeScreen" component={WelcomeScreen} />
   </Tab.Navigator>
 );
 
